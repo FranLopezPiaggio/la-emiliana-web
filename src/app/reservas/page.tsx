@@ -6,6 +6,11 @@ import ConciergeCTA from "@/components/ConciergeCTA";
 import LocationMap from "@/components/Location";
 import Footer from "@/components/Footer";
 
+export const metadata = {
+  title: "Reservas | La Emiliana",
+  description: "Reserva y conoce La Emiliana, Garruchos, Corrientes.",
+};
+
 export default function Home() {
   return (
     <>

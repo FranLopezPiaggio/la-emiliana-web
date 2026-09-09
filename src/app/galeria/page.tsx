@@ -6,8 +6,8 @@ import ImageGallery from "@/components/ImageGallery";
 import HorizontalScrollGallery from "@/components/HorizontalScrollGallery";
 
 export const metadata = {
-  title: "Galería | Iberá Eco-Lodge",
-  description: "Recorrido visual horizontal por los Esteros del Iberá.",
+  title: "Galería | La Emiliana",
+  description: "Recorrido visual por La Emiliana, Garruchos, Corrientes.",
 };
 
 export default function Home() {

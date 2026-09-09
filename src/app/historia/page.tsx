@@ -9,6 +9,11 @@ import ConciergeCTA from "@/components/ConciergeCTA";
 import LocationMap from "@/components/Location";
 import Footer from "@/components/Footer";
 
+export const metadata = {
+  title: "Historia | La Emiliana",
+  description: "Historia de La Emiliana, Garruchos, Corrientes.",
+};
+
 export default function Home() {
   return (
     <>

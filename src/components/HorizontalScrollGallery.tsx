@@ -7,10 +7,9 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
-// Registrar el plugin de ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
-interface GalleryItem {
+export interface GalleryItem {
   id: string;
   src: string;
   title: string;
@@ -48,7 +47,7 @@ const GALLERY_IMAGES: GalleryItem[] = [
     title: "Refugio del Humedal",
     category: "Alojamiento",
   },
-    {
+  {
     id: "6",
     src: "/cabana4.jpg",
     title: "Fauna Silvestre",
@@ -62,7 +61,13 @@ const GALLERY_IMAGES: GalleryItem[] = [
   },
 ];
 
-export default function HorizontalScrollGallery() {
+interface HorizontalScrollGalleryProps {
+  images?: GalleryItem[];
+}
+
+export default function HorizontalScrollGallery({
+  images = GALLERY_IMAGES,
+}: HorizontalScrollGalleryProps) {
   const triggerRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
 
@@ -73,21 +78,25 @@ export default function HorizontalScrollGallery() {
 
       if (!pinContainer || !horizontalContainer) return;
 
-      // Calculamos cuánto ancho total debemos desplazar
-      const totalScrollWidth =
-        horizontalContainer.scrollWidth - window.innerWidth;
+      // Función que calcula la distancia exacta a trasladar en X
+      const getScrollAmount = () => {
+        const totalWidth = horizontalContainer.scrollWidth;
+        const viewportWidth = window.innerWidth;
+        return Math.max(0, totalWidth - viewportWidth);
+      };
 
       const animation = gsap.to(horizontalContainer, {
-        x: -totalScrollWidth,
+        x: () => -getScrollAmount(),
         ease: "none",
         scrollTrigger: {
           trigger: pinContainer,
-          start: "top top", // Inicia cuando la parte superior de la sección llega a la parte superior de la pantalla
-          end: () => `+=${totalScrollWidth}`, // La distancia de scroll vertical equivale al ancho horizontal sobrante
-          scrub: 1, // Suavizado de la animación (1 segundo de inercia)
-          pin: true, // "Ancla" o fija la sección en pantalla durante el scroll
+          start: "top top",
+          // 💡 Amplificamos la distancia vertical (x 1.25) para darle más tiempo de lectura en el eje Y
+          end: () => `+=${getScrollAmount() * 1.25}`,
+          scrub: 1.2, // Suavizado de inercia
+          pin: true,
           anticipatePin: 1,
-          invalidateOnRefresh: true, // Recalcula si el usuario redimensiona la ventana
+          invalidateOnRefresh: true, // Recalcula si cambia el viewport
         },
       });
 
@@ -95,16 +104,16 @@ export default function HorizontalScrollGallery() {
         animation.kill();
       };
     },
-    { scope: triggerRef }
+    { scope: triggerRef, dependencies: [images] }
   );
 
   return (
-    // El contenedor principal que GSAP utilizará como trigger para hacer 'pin'
-    <div ref={triggerRef} className="overflow-hidden bg-moss">
+    // Espaciado vertical (py-12 lg:py-20) para dar aire a la sección completa
+    <div ref={triggerRef} className="overflow-hidden bg-moss py-12 lg:py-20">
       <div className="h-screen w-full flex flex-col justify-center relative overflow-hidden">
         
-        {/* Encabezado Fijo superior */}
-        <div className="max-w-[1360px] w-full mx-auto px-6 lg:px-12 pt-12 pb-6">
+        {/* Encabezado superior */}
+        <div className="max-w-[1360px] w-full mx-auto px-6 lg:px-12 pt-6 pb-6">
           <span className="font-deco text-xs uppercase text-gold-line tracking-[0.25em] block mb-2">
             Experiencia Inmersiva
           </span>
@@ -113,21 +122,23 @@ export default function HorizontalScrollGallery() {
           </h1>
         </div>
 
-        {/* Tira Horizontal desplazable por GSAP */}
+        {/* Tira Horizontal:
+            💡 Usamos pl-6 lg:pl-12 (inicio) y pr-[20vw] (final).
+            El padding-right de 20vw crea el margen de seguridad para que la última imagen llegue con espacio. */}
         <div
           ref={sectionRef}
-          className="flex gap-8 px-6 lg:px-12 w-max items-center h-[65vh] will-change-transform"
+          className="flex gap-8 pl-6 lg:pl-12 pr-[20vw] w-max items-center h-[60vh] lg:h-[65vh] will-change-transform"
         >
-          {GALLERY_IMAGES.map((img) => (
+          {images.map((img) => (
             <div
               key={img.id}
-              className="w-[80vw] sm:w-[500px] lg:w-[620px] h-full shrink-0 relative rounded-2xl overflow-hidden group bg-moss-300 border border-gold-line/20 shadow-2xl"
+              className="w-[80vw] sm:w-[480px] lg:w-[600px] h-full shrink-0 relative rounded-2xl overflow-hidden group bg-moss-300 border border-gold-line/20 shadow-2xl"
             >
               <Image
                 src={img.src}
                 alt={img.title}
                 fill
-                sizes="(max-width: 640px) 80vw, 620px"
+                sizes="(max-width: 640px) 80vw, 600px"
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
 
@@ -148,7 +159,7 @@ export default function HorizontalScrollGallery() {
         </div>
 
         {/* Indicador de Desplazamiento */}
-        <div className="max-w-[1360px] w-full mx-auto px-6 lg:px-12 pt-6 pb-8 flex items-center gap-2 text-sand/60 text-xs font-sans uppercase tracking-widest">
+        <div className="max-w-[1360px] w-full mx-auto px-6 lg:px-12 pt-6 pb-4 flex items-center gap-2 text-sand/60 text-xs font-sans uppercase tracking-widest">
           <span className="material-symbols-outlined text-[18px] text-gold-line animate-pulse">
             south
           </span>
