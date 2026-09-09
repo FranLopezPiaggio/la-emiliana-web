@@ -1,10 +1,7 @@
-import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import BackgroundGoldenLines from "@/components/BackgroundGoldenLines";
 import Hero from "@/components/Hero";
-import StoryZigzag from "@/components/StoryZigzag";
 import CabinGrid from "@/components/CabinGrid";
-import SustainabilityMetrics from "@/components/SustainabilityMetrics";
 import ConciergeCTA from "@/components/ConciergeCTA";
 import LocationMap from "@/components/Location";
 import Footer from "@/components/Footer";
@@ -17,6 +14,8 @@ export default function Home() {
         <div className="flex flex-col w-full relative z-10">
           <Hero/>
           <LocationMap/>
+          <CabinGrid/>
+          <ConciergeCTA/>
         </div>  
       </main>
     </>

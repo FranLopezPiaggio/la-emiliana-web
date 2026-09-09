@@ -1,26 +1,77 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Fuentes */
+  --font-sans: var(--font-plus-jakarta), sans-serif;
+  --font-serif: var(--font-playfair), serif;
+  --font-cinzel: var(--font-cinzel), serif;
+
+  /* Paleta de colores de Stitch */
+  --color-moss: #353B2B;
+  --color-moss-50: #545D44;
+  --color-moss-100: #444B37;
+  --color-moss-200: #353B2B;
+  --color-moss-300: #2B3023;
+  --color-moss-400: #22271B;
+
+  --color-sand: #E5DEC9;
+  --color-sand-light: #F8F5EE;
+  --color-sand-dim: #C2BAA6;
+
+  --color-gold-line: #C5B295;
+  --color-outline-gold: rgba(212, 184, 150, 0.28);
+
+  --color-terracotta: #B66D44;
+  --color-terracotta-hover: #C97C52;
+  --color-terracotta-dim: #7C4422;
+
+  --color-surface: #353B2B;
+  --color-surface-container: #2B3023;
+  --color-primary: #F8F5EE;
+  --color-secondary: #B66D44;
+
+  /* Radios de borde personalizados */
+  --radius-default: 1.25rem;
+  --radius-lg: 2rem;
+  --radius-xl: 2.5rem;
+  --radius-2xl: 3.5rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html, body {
+    background-color: var(--color-moss);
+    color: var(--color-sand-light);
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  ::-webkit-scrollbar {
+    display: none;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .font-deco {
+    font-family: var(--font-cinzel), serif;
+    letter-spacing: 0.18em;
+  }
+
+  .feathered-card {
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 45px rgba(20, 24, 15, 0.45);
+  }
+
+  .feathered-image {
+    -webkit-mask-image: radial-gradient(ellipse 92% 90% at 50% 50%, rgba(0,0,0,1) 68%, rgba(0,0,0,0) 99%);
+    mask-image: radial-gradient(ellipse 92% 90% at 50% 50%, rgba(0,0,0,1) 68%, rgba(0,0,0,0) 99%);
+  }
+
+  .feathered-hero {
+    -webkit-mask-image: radial-gradient(ellipse 96% 92% at 50% 50%, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 99%);
+    mask-image: radial-gradient(ellipse 96% 92% at 50% 50%, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 99%);
+  }
+
+  .hero-bottom-fade {
+    background: linear-gradient(to bottom, transparent 60%, var(--color-moss) 100%);
+  }
 }

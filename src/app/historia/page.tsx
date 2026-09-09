@@ -16,7 +16,7 @@ export default function Home() {
         <BackgroundGoldenLines />
         <div className="flex flex-col w-full relative z-10">
           <Hero/>
-          <LocationMap/>
+          <StoryZigzag/>
         </div>  
       </main>
     </>
