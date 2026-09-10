@@ -1,7 +1,11 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
   return (
     <>
     <header className="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur-md border-b border-gold-line/15 transition-all duration-300">
@@ -44,20 +48,49 @@ export default function Navbar() {
             <button type="button" className="text-moss-light font-semibold cursor-pointer">
               ES
             </button>
-            {/* <span>/</span>
-            <button type="button" className="hover:text-sand-light transition-colors cursor-pointer">
-              EN
-            </button> */}
           </div>
           <Link
             href=""
-            className="inline-flex items-center justify-center bg-terracotta text-sand-light px-6 py-2.5 rounded-full text-xs uppercase tracking-[0.16em] font-medium shadow-md hover:bg-terracotta-hover transition-all duration-300 border border-gold-line/30"
+            className="hidden sm:inline-flex items-center justify-center bg-terracotta text-sand-light px-6 py-2.5 rounded-full text-xs uppercase tracking-[0.16em] font-medium shadow-md hover:bg-terracotta-hover transition-all duration-300 border border-gold-line/30"
           >
             Contacto
           </Link>
+          {/* Burger - mobile only */}
+          <button
+            type="button"
+            aria-label={open ? "Cerrar menú" : "Abrir menú"}
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+            className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-gold-line/20 text-moss hover:bg-moss/5 transition-colors cursor-pointer"
+          >
+            <span className="material-symbols-outlined text-[22px] leading-none">{open ? "close" : "menu"}</span>
+          </button>
         </div>
 
       </div>
+      {/* Mobile dropdown - ponytail: sin focus-trap/lock-scroll/animación GSAP, agregar Radix Dialog + body overflow hidden + GSAP si hace falta fullscreen/a11y avanzada */}
+      {open && (
+        <nav className="md:hidden absolute top-20 inset-x-0 bg-white/95 backdrop-blur-md border-t border-gold-line/15 shadow-lg">
+          <div className="flex flex-col px-6 py-6 gap-5">
+            <Link onClick={() => setOpen(false)} href="/galeria" className="text-xs uppercase tracking-[0.2em] text-moss/80 hover:text-moss-light transition-colors font-sans py-2">
+              Galeria
+            </Link>
+            <Link onClick={() => setOpen(false)} href="/reservas" className="text-xs uppercase tracking-[0.2em] text-moss/80 hover:text-moss-light transition-colors font-sans py-2">
+              Reservas
+            </Link>
+            <Link onClick={() => setOpen(false)} href="/historia" className="text-xs uppercase tracking-[0.2em] text-moss/80 hover:text-moss-light transition-colors font-sans py-2">
+              Historia
+            </Link>
+            <Link
+              onClick={() => setOpen(false)}
+              href=""
+              className="mt-2 inline-flex items-center justify-center bg-terracotta text-sand-light px-6 py-3 rounded-full text-xs uppercase tracking-[0.16em] font-medium shadow-md hover:bg-terracotta-hover transition-colors border border-gold-line/30 sm:hidden"
+            >
+              Contacto
+            </Link>
+          </div>
+        </nav>
+      )}
     </header>
   </>
   );
