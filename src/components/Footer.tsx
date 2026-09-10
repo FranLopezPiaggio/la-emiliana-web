@@ -112,7 +112,7 @@ export default function Footer() {
 
         {/* Bottom Bar / Copyright */}
         <div className="pt-8 border-t border-gold-line/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sand/60 text-xs font-sans">
-          <p>© {currentYear} Iberá Eco-Lodge. Esteros del Iberá, Corrientes. Todos los derechos reservados.</p>
+          <p>© {currentYear} La Emiliana, Garruchos, Corrientes. Todos los derechos reservados.</p>
           <div className="flex items-center gap-6">
             <Link className="hover:text-sand-light transition-colors" href="#">
               Privacidad

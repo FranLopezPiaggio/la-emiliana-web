@@ -70,10 +70,10 @@ export default function ConciergeCTA() {
                   mail
                 </span>
                 <a
-                  href="mailto:concierge@iberalodge.com.ar"
+                  href="mailto:contacto@laemilianagarruchos.com.ar"
                   className="hover:text-gold-line transition-colors"
                 >
-                  laemiliana@complejo.com.ar
+                  contacto@laemilianagarruchos.com.ar
                 </a>
               </div>
             </div>

@@ -17,8 +17,8 @@ export interface GalleryItem {
 }
 
 const GALLERY_IMAGES: GalleryItem[] = [
-  { id: "1", src: "/cabana1.jpg", title: "Ventanales al Humedal", category: "Interiores" },
-  { id: "2", src: "/cabana2.jpg", title: "Atardeceres Dorados", category: "Exterior" },
+  { id: "1", src: "/cabana-flores.jpg", title: "Descansa en la naturaleza", category: "Instalaciones" },
+  { id: "2", src: "/tranquera2.jpg", title: "Atardeceres Dorados", category: "Exterior" },
   { id: "3", src: "/cabana3.jpg", title: "Cabañas de Madera", category: "Arquitectura" },
   { id: "4", src: "/cabana4.jpg", title: "Fauna Silvestre", category: "Experiencias" },
   { id: "5", src: "/cabana2.jpg", title: "Refugio del Humedal", category: "Alojamiento" },
