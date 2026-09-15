@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Outfit } from "next/font/google";
 import "./globals.css";
 import {Navbar} from "@/components/new/Navbar";
-import Footer from "@/components/Footer";
+import Footer from "@/components/new/Footer";
 
 // const cinzel = Cinzel({
 //   subsets: ["latin"],

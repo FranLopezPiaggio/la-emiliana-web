@@ -1,10 +1,10 @@
-import Navbar from "@/components/Navbar";
-import BackgroundGoldenLines from "@/components/BackgroundGoldenLines";
-import Hero from "@/components/Hero";
-import CabinGrid from "@/components/CabinGrid";
-import ConciergeCTA from "@/components/ConciergeCTA";
-import LocationMap from "@/components/Location";
-import Footer from "@/components/Footer";
+import Navbar from "@/components/legacy/Navbar";
+import BackgroundGoldenLines from "@/components/new/BackgroundGoldenLines";
+import Hero from "@/components/legacy/Hero";
+import CabinGrid from "@/components/legacy/CabinGrid";
+import ConciergeCTA from "@/components/legacy/ConciergeCTA";
+import LocationMap from "@/components/new/Location";
+import Footer from "@/components/new/Footer";
 
 export const metadata = {
   title: "Reservas | La Emiliana",

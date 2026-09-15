@@ -1,5 +1,5 @@
-import BackgroundGoldenLines from "@/components/BackgroundGoldenLines";
-import HorizontalScrollGallery from "@/components/HorizontalScrollGallery";
+import BackgroundGoldenLines from "@/components/new/BackgroundGoldenLines";
+import HorizontalScrollGallery from "@/components/legacy/HorizontalScrollGallery";
 
 export const metadata = {
   title: "Galería | La Emiliana",

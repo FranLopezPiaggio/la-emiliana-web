@@ -1,16 +1,17 @@
 import Image from "next/image";
-import Navbar from "@/components/Navbar";
-import BackgroundGoldenLines from "@/components/BackgroundGoldenLines";
+import Navbar from "@/components/legacy/Navbar";
+import BackgroundGoldenLines from "@/components/new/BackgroundGoldenLines";
 import {Hero} from "@/components/new/Hero"
-import StoryZigzag from "@/components/StoryZigzag";
-import CabinGrid from "@/components/CabinGrid";
-import SustainabilityMetrics from "@/components/SustainabilityMetrics";
-import ConciergeCTA from "@/components/ConciergeCTA";
-import LocationMap from "@/components/Location";
-import Footer from "@/components/Footer";
+import StoryZigzag from "@/components/legacy/StoryZigzag";
+import CabinGrid from "@/components/legacy/CabinGrid";
+import SustainabilityMetrics from "@/components/legacy/SustainabilityMetrics";
+import ConciergeCTA from "@/components/legacy/ConciergeCTA";
+import LocationMap from "@/components/new/Location";
+import Footer from "@/components/new/Footer";
 import { ComplexSection } from "@/components/new/Complex";
 import { AmenitiesBanner } from "@/components/new/AmenitiesBanner";
 import { ExperienceSection } from "@/components/new/ExperienceSection";
+import { ContactFormSection } from "@/components/new/ContactForm";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
           <ComplexSection/>
           <AmenitiesBanner/>
           <ExperienceSection/>
+          <ContactFormSection/>
           <LocationMap/>
         </div>  
       </main>

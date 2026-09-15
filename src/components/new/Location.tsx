@@ -10,7 +10,7 @@ export default function LocationMap() {
   const embedUrl = `https://maps.google.com/maps?q=${locationQuery}&t=&z=12&ie=UTF8&iwloc=&output=embed`;
 
   return (
-    <section className="w-full py-20 bg-moss text-sand relative" id="ubicacion">
+    <section id="ubicacion" className="w-full py-20 bg-moss text-sand relative">
       <div className="max-w-[1360px] mx-auto px-6 lg:px-12">
         
         {/* Section Header */}

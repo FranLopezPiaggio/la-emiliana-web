@@ -48,6 +48,7 @@ function VideoFrame() {
 
   return (
     <div
+      id="experiencia"
       ref={containerRef}
       onMouseEnter={handleMouseEnter}
       className="relative h-[380px] sm:h-[460px] w-full rounded-2xl overflow-hidden shadow-md bg-stone-900 group cursor-pointer"

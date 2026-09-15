@@ -124,7 +124,7 @@ export function ComplexSection() {
   };
 
   return (
-    <section className="relative w-full bg-[#f6f2e9] text-[#2c3e2e] py-16 md:py-24 px-6 lg:px-16 overflow-hidden">
+    <section id="complejo" className="relative w-full bg-[#f6f2e9] text-[#2c3e2e] py-16 md:py-24 px-6 lg:px-16 overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
         
         {/* LADO IZQUIERDO: Texto e información editorial */}
@@ -279,10 +279,10 @@ export function ComplexSection() {
               {/* Botón Cerrar */}
               <button
                 onClick={handleClose}
-                className="p-2.5 bg-white/10 hover:bg-white/20 text-white transition-all focus:outline-none"
+                className="p-2.5 mt-20 bg-white-600/80 hover:bg-white-600 text-white transition-all focus:outline-none shadow-md hover:scale-105 active:scale-95"
                 aria-label="Cerrar galería"
               >
-                <X className="w-6 h-6" />
+                <X className="w-6 h-6 color-black" />
               </button>
             </div>
           </div>

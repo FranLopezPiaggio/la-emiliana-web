@@ -1,5 +1,6 @@
 // src/components/Footer.tsx
 import Link from "next/link";
+import { getWhatsappUrl } from "@/lib/whatsapp";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -72,12 +73,14 @@ export default function Footer() {
             </p>
             <Link
               className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-sand-light hover:text-gold-line transition-colors mt-2"
-              href="#concierge"
+              href={getWhatsappUrl("generic")}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <span className="material-symbols-outlined text-[16px] text-terracotta">
                 chat
               </span>
-              <span>WhatsApp Concierge Directo</span>
+              <span>WhatsApp Directo</span>
             </Link>
           </div>
 
