@@ -41,7 +41,7 @@ export function Hero() {
         {/* Right Side Callout / Script Overlay Text */}
         <div className="lg:col-span-5 flex lg:justify-end items-end h-full">
           {/* Recreación del texto manuscrito "Tu próxima inversión en la naturaleza" */}
-          <div className="text-white drop-shadow-md text-right max-w-xs flex flex-col items-end gap-4">
+          <div className="text-white drop-shadow-md text-left lg:text-right max-w-xs flex flex-col items-start lg:items-end gap-4">
             <p className="font-serif italic text-2xl sm:text-3xl text-stone-100 font-light leading-snug">
               Tu próxima inversión comienza acá
             </p>
