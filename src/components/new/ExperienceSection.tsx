@@ -56,7 +56,7 @@ function VideoFrame() {
       <video
         ref={videoRef}
         preload="none"
-        poster="/poster-experiencia.jpg"
+        poster="/cabana4.jpg"
         muted
         playsInline
         className="w-full h-full object-cover rounded-2xl"
@@ -66,7 +66,7 @@ function VideoFrame() {
 
         {/* Fallback en caso de que el navegador no soporte la etiqueta <video> */}
         <Image
-          src="/poster-experiencia.jpg"
+          src="/cabana4.jpg"
           alt="Muelle al atardecer en La Emiliana"
           fill
           className="object-cover"

@@ -43,7 +43,7 @@ export function Hero() {
           {/* Recreación del texto manuscrito "Tu próxima inversión en la naturaleza" */}
           <div className="text-white drop-shadow-md text-right max-w-xs flex flex-col items-end gap-4">
             <p className="font-serif italic text-2xl sm:text-3xl text-stone-100 font-light leading-snug">
-              Tu próxima inversión en la naturaleza
+              Tu próxima inversión comienza acá
             </p>
             <Link
               href="#complejo"
