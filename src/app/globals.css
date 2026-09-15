@@ -2,9 +2,12 @@
 
 @theme {
   /* Fuentes */
-  --font-sans: var(--font-plus-jakarta), sans-serif;
+  /* --font-sans: var(--font-plus-jakarta), sans-serif;
   --font-serif: var(--font-playfair), serif;
-  --font-cinzel: var(--font-cinzel), serif;
+  --font-cinzel: var(--font-cinzel), serif; */
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-outfit), system-ui, sans-serif;
+
 
   /* Paleta de colores de Stitch */
   --color-moss: #353B2B;

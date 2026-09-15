@@ -8,7 +8,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
     <>
-    <header className="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur-md border-b border-gold-line/15 transition-all duration-300">
+    <header className="fixed top-0 inset-x-0 z-50 bg-white/70 backdrop-blur-md border-b border-white/20 transition-all duration-300">
       <div className="h-20 max-w-[1200px] mx-auto px-6 lg:px-12 flex items-center justify-between gap-4">
         
         {/* Logo */}
@@ -34,9 +34,9 @@ export default function Navbar() {
           <Link href="/galeria" className="text-xs uppercase tracking-[0.2em] text-moss/80 hover:text-moss-light transition-colors font-sans">
             Galeria
           </Link>
-          <Link href="/reservas" className="text-xs uppercase tracking-[0.2em] text-moss/80 hover:text-moss-light transition-colors font-sans">
+          {/* <Link href="/reservas" className="text-xs uppercase tracking-[0.2em] text-moss/80 hover:text-moss-light transition-colors font-sans">
             Reservas
-          </Link>
+          </Link> */}
           <Link href="/historia" className="text-xs uppercase tracking-[0.2em] text-moss/80 hover:text-moss-light transition-colors font-sans">
             Historia
           </Link>
