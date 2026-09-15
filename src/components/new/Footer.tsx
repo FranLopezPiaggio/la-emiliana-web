@@ -42,19 +42,19 @@ export default function Footer() {
             </Link>
             <Link
               className="text-sm text-sand/80 hover:text-sand-light transition-colors font-light"
-              href="#experiencias"
+              href="#experiencia"
             >
-              Yerbales y Pinares
+              Pinares y Lagunas
             </Link>
-            <Link
+            {/* <Link
               className="text-sm text-sand/80 hover:text-sand-light transition-colors font-light"
               href="#origen"
             >
               Gastronomía Regional Correntina
-            </Link>
+            </Link> */}
             <Link
               className="text-sm text-sand/80 hover:text-sand-light transition-colors font-light"
-              href="#sustentabilidad"
+              href="#complejo"
             >
               El Rio Uruguay
             </Link>

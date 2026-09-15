@@ -28,7 +28,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
     id: "cabanas",
     title: "Cabañas",
     category: "Alojamiento & Confort",
-    src: "/entrada.jpg",
+    src: "/cabana3.jpg",
     alt: "Cabaña de madera rodeada de árboles y naturaleza",
     icon: "home",
   },
@@ -36,7 +36,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
     id: "pileta",
     title: "Pileta",
     category: "Recreación & Relax",
-    src: "/entrada1.jpg",
+    src: "/pileta-cabana.jpg",
     alt: "Piscina al aire libre rodeada de verde",
     icon: "waves",
   },
@@ -44,7 +44,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
     id: "lagunas",
     title: "Lagunas",
     category: "Entorno Natural",
-    src: "/entrada.jpg",
+    src: "/laguna.jpeg",
     alt: "Vista panorámica del río y vegetación al atardecer",
     icon: "lagoon",
   },
@@ -60,7 +60,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
     id: "atardecer",
     title: "Atardeceres Únicos",
     category: "Experiencia",
-    src: "/entrada.jpg",
+    src: "/pino-flores1.jpg",
     alt: "Cielo dorado sobre el bosque y el estanque",
     icon: "nature",
   },
@@ -143,10 +143,10 @@ export function ComplexSection() {
 
           {/* Texto descriptivo */}
           <p className="text-base md:text-lg text-stone-600 font-light leading-relaxed">
-            La Emiliana es un complejo turístico dentro de una chacra, rodeado
+            La Emiliana es un complejo turístico de 36 hectareas, rodeado
             de naturaleza, con todo lo necesario para vivir una experiencia de
-            descanso, recreación y conexión. Un lugar ideal para familias, grupos
-            de amigos y también para quienes buscan invertir en turismo y
+            descanso, recreación y conexión. Un lugar ideal para familias. Disponible 
+            para quienes buscan invertir en turismo y
             desarrollo en la región.
           </p>
 

@@ -137,9 +137,10 @@ export function ExperienceSection() {
           {/* Cuerpo en Outfit */}
           <p className="text-base md:text-lg text-stone-600 font-light leading-relaxed">
             En La Emiliana, cada rincón invita a bajar el ritmo, respirar
-            profundo y disfrutar lo simple. Desde un atardecer en la laguna
-            hasta una tarde de fútbol o vóley, la experiencia está pensada para
-            que vivas momentos únicos, en contacto con la naturaleza.
+            profundo y disfrutar lo simple. Desde un atardecer entre los pinares, 
+            sus lagunas y una tarde de fútbol o vóley en sus amplios parques, 
+            la experiencia está pensada para que vivas momentos únicos, en contacto 
+            con la naturaleza.
           </p>
 
           {/* Pilares / Íconos inferiores */}
