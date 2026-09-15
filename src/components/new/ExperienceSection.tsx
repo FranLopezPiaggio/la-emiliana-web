@@ -61,7 +61,7 @@ function VideoFrame() {
         className="w-full h-full object-cover rounded-2xl"
       >
         {/* <source src="/video-experiencia.webm" type="video/webm" /> */}
-        <source src="/video_optimizado1.mp4" type="video/mp4" />
+        <source src="/video_optimizado3.mp4" type="video/mp4" />
 
         {/* Fallback en caso de que el navegador no soporte la etiqueta <video> */}
         <Image
