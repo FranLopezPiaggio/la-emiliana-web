@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 // import { Cinzel, Playfair_Display, Plus_Jakarta_Sans, Outfit } from "next/font/google";
 import { Playfair_Display, Outfit } from "next/font/google";
 import "./globals.css";
-import {Navbar} from "@/components/new/Navbar";
-import Footer from "@/components/new/Footer";
+import {Navbar} from "@/components/new/ui/Navbar";
+import Footer from "@/components/new/ui/Footer";
 
 // const cinzel = Cinzel({
 //   subsets: ["latin"],

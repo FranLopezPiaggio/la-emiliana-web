@@ -7,7 +7,7 @@ import CabinGrid from "@/components/legacy/CabinGrid";
 import SustainabilityMetrics from "@/components/legacy/SustainabilityMetrics";
 import ConciergeCTA from "@/components/legacy/ConciergeCTA";
 import LocationMap from "@/components/new/Location";
-import Footer from "@/components/new/Footer";
+import Footer from "@/components/new/ui/Footer";
 import { ComplexSection } from "@/components/new/Complex";
 import { AmenitiesBanner } from "@/components/new/AmenitiesBanner";
 import { ExperienceSection } from "@/components/new/ExperienceSection";
