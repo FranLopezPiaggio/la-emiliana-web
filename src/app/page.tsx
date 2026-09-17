@@ -1,17 +1,17 @@
 import Image from "next/image";
 import Navbar from "@/components/legacy/Navbar";
-import BackgroundGoldenLines from "@/components/new/BackgroundGoldenLines";
-import {Hero} from "@/components/new/Hero"
+import BackgroundGoldenLines from "@/components/new/ui/BackgroundGoldenLines";
+import {Hero} from "@/components/new/home/Hero"
 import StoryZigzag from "@/components/legacy/StoryZigzag";
 import CabinGrid from "@/components/legacy/CabinGrid";
 import SustainabilityMetrics from "@/components/legacy/SustainabilityMetrics";
 import ConciergeCTA from "@/components/legacy/ConciergeCTA";
-import LocationMap from "@/components/new/Location";
+import LocationMap from "@/components/new/ui/Location";
 import Footer from "@/components/new/ui/Footer";
-import { ComplexSection } from "@/components/new/Complex";
-import { AmenitiesBanner } from "@/components/new/AmenitiesBanner";
-import { ExperienceSection } from "@/components/new/ExperienceSection";
-import { ContactFormSection } from "@/components/new/ContactForm";
+import { ComplexSection } from "@/components/new/home/Complex";
+import { AmenitiesBanner } from "@/components/new/home/AmenitiesBanner";
+import { ExperienceSection } from "@/components/new/home/ExperienceSection";
+import { ContactFormSection } from "@/components/new/ui/ContactForm";
 
 export default function Home() {
   return (

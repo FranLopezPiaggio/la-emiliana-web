@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from 'next/image';
 import { ArrowRight, MapPin, Calendar, Users, Moon, MessageCircle } from "lucide-react";
 
 export function BookingHeroSection() {
@@ -19,44 +20,78 @@ export function BookingHeroSection() {
     window.open(whatsappUrl, "_blank");
   };
 
-  return (
-    <section className="relative min-h-screen w-full flex flex-col justify-between pt-24 pb-12 px-6 lg:px-16 overflow-hidden">
-      {/* Imagen de fondo con gradiente direccional */}
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('/hero-bg-booking.jpg')`, // Asegúrate de colocar esta imagen en /public
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/70" />
+return (
+    <section className="relative min-h-screen w-full flex flex-col justify-between pt-24 pb-12 px-6 lg:px-16 overflow-hidden bg-[#233325]">
+      
+      {/* CAPA DE FONDO (Punteros e interacciones desactivados) */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+
+        {/* -------------------------------------------------------------------
+            VALOR 1: ANCHO Y POSICIÓN DE LA IMAGEN
+            - 'right-0': Pega la imagen al borde derecho.
+            - 'w-full lg:w-[60%]': En pantallas grandes ocupa el 60% de la pantalla.
+              (Subí este valor si querés que la imagen entre más a la izquierda, ej. 65% o 70%).
+           ------------------------------------------------------------------- */}
+        <div className="absolute top-0 right-0 w-full lg:w-[60%] h-full">
+          <Image
+            src="/cabana4.jpg"
+            alt="La Emiliana"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+        </div>
+
+        {/* -------------------------------------------------------------------
+            VALOR 2 Y 3: EL COLOR BASE Y LA TRANSICIÓN (GRADIENTE)
+            - Ocupa el 100% de la pantalla (inset-0).
+            - El color de fondo base sale de <section className="bg-[#233325]">.
+            - El gradiente maneja la mezcla en 3 puntos porcentuales del ancho total (90deg):
+           ------------------------------------------------------------------- */}
+        <div 
+          className="absolute inset-0 w-full h-full"
+          style={{
+            background: `linear-gradient(
+              90deg, 
+              #233325 0%, 
+              #233325 40%, 
+              rgba(35, 51, 37, 0.8) 55%, 
+              rgba(35, 51, 37, 0) 70%
+            )`
+          }}
+        />
       </div>
 
       {/* Contenido principal del Hero */}
-      <div className="relative z-10 max-w-7xl w-full mx-auto my-auto pt-8 pb-12 grid grid-cols-1 lg:grid-cols-12 items-end gap-10">
+      <div className="relative z-10 max-w-7xl w-full mx-auto my-auto pt-8 pb-12 flex flex-col justify-end items-start">
         
-        {/* Encabezado Editorial (Izquierda) */}
-        <div className="lg:col-span-7 space-y-6">
+        {/* Encabezado Editorial y Texto Manuscrito */}
+        <div className="max-w-2xl space-y-6">
+          
+          {/* Badge de ubicación */}
           <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-full text-white border border-white/10 text-xs tracking-widest uppercase font-semibold">
             <MapPin className="w-3.5 h-3.5 text-stone-200" />
             <span>Garruchos, Corrientes</span>
           </div>
 
+          {/* Título Principal */}
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif text-[#f6f2e9] tracking-tight font-normal leading-[1.05] uppercase">
             Reservá tu estadía
           </h1>
 
-          <p className="text-lg md:text-xl text-stone-200 font-light max-w-xl leading-relaxed">
+          {/* Subtítulo Descriptivo */}
+          <p className="text-lg md:text-xl text-stone-200 font-light leading-relaxed">
             Asegurá tu lugar en La Emiliana y disfrutá de la tranquilidad, la naturaleza y momentos inolvidables en nuestras cabañas.
           </p>
-        </div>
 
-        {/* Texto manuscrito lateral (Derecha) */}
-        <div className="lg:col-span-5 flex lg:justify-end items-end">
-          <div className="text-white drop-shadow-md text-left lg:text-right max-w-xs flex flex-col items-start lg:items-end gap-2">
-            <p className="font-serif italic text-2xl sm:text-3xl text-stone-100 font-light leading-snug">
+          {/* Texto Manuscrito / Itálico Alineado Abajo */}
+          <div className="pt-2">
+            <p className="font-serif italic text-2xl sm:text-3xl text-amber-100/90 font-light leading-snug drop-shadow-md">
               Desconectá del ritmo, conectá con el entorno
             </p>
           </div>
+
         </div>
 
       </div>

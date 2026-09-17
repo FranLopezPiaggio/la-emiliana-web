@@ -1,11 +1,12 @@
 import Navbar from "@/components/legacy/Navbar";
-import BackgroundGoldenLines from "@/components/new/BackgroundGoldenLines";
+import BackgroundGoldenLines from "@/components/new/ui/BackgroundGoldenLines";
 import Hero from "@/components/legacy/Hero";
-import CabinGrid from "@/components/legacy/CabinGrid";
+import {CabinsGrid} from "@/components/new/booking/CabinGrid";
 import ConciergeCTA from "@/components/legacy/ConciergeCTA";
-import LocationMap from "@/components/new/Location";
+import LocationMap from "@/components/new/ui/Location";
 import Footer from "@/components/new/ui/Footer";
 import { BookingHeroSection } from "@/components/new/booking/HeroBooking";
+import { AmenitiesBanner } from "@/components/new/booking/Amenities";
 
 export const metadata = {
   title: "Reservas | La Emiliana",
@@ -19,6 +20,8 @@ export default function Home() {
         <BackgroundGoldenLines />
         <div className="flex flex-col w-full relative z-10">
         <BookingHeroSection/>
+        <CabinsGrid/>
+        <AmenitiesBanner/>
         </div>  
       </main>
     </>
