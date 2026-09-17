@@ -117,7 +117,7 @@ export function GallerySection() {
 
           {/* Imagen Activa */}
           <div className="relative max-h-[85vh] max-w-[90vw] overflow-hidden">
-            <img
+            <Image
               src={IMAGES[selectedIndex].src}
               alt={IMAGES[selectedIndex].alt}
               className="max-h-[85vh] w-auto max-w-[90vw] object-contain"

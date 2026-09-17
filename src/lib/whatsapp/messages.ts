@@ -4,14 +4,16 @@ export type WhatsappOrigin =
   | "amenities"
   | "experience"
   | "contact"
-  | "concierge"
+  | "booking"
   | "footer"
   | "location"
   | "generic";
 
 export type MessageParams = {
   name?: string;
-  month?: string;
+  date?: Date;
+  persons?: string;
+  nigth?: number;
   interest?: "invertir" | "conocer" | "ambas";
   cabin?: string;
 };
@@ -24,8 +26,8 @@ export function getWhatsappMessage(
   const name = p.name?.trim() ? `Soy ${p.name.trim()}. ` : "";
 
   switch (origin) {
-    case "concierge":
-      return `Hola La Emiliana! ${name}Quisiera consultar disponibilidad para ${p.month ?? "próximas fechas"}.`;
+    case "booking":
+      return `Hola La Emiliana! ${name}Quisiera consultar disponibilidad para ${p.date ?? "próximas fechas"}.`;
     case "contact":
       return `Hola La Emiliana! ${name}Me interesa ${p.interest ?? "conocer el proyecto"}. Quisiera más información.`;
     case "complex":

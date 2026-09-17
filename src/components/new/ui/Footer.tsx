@@ -6,7 +6,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-moss-400 border-t border-gold-line/15 text-sand py-16">
+    <footer className="w-full bg-green border-t border-gold-line/15 text-sand py-16">
       <div className="max-w-[1360px] mx-auto px-6 lg:px-12">
         
         {/* Main Footer Navigation Grid */}

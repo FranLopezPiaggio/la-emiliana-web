@@ -10,7 +10,6 @@ import {
   ChevronRight,
   X,
   Maximize2,
-  Sparkles,
 } from "lucide-react";
 
 // Estructura de datos para las imágenes de la galería

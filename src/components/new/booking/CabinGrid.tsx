@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
-import { Users, Bed, Wifi, Check, ArrowRight } from "lucide-react";
+import { Users, Bed, Check, ArrowRight } from "lucide-react";
 
 export interface Cabin {
   id: string;
@@ -23,7 +23,7 @@ const CABINS: Cabin[] = [
     capacity: "Hasta 6 personas",
     beds: "2 Dormitorios",
     description: "Espaciosa cabaña rodeada de vegetación nativa. Ideal para familias o grupos que buscan privacidad y máxima comodidad.",
-    image: "/entrada.jpg",
+    image: "/entrada-camino.jpg",
     features: ["Parrilla privada", "Aire Acondicionado", "Cocina equipada", "Deck con vista"],
   },
   {
@@ -39,7 +39,6 @@ const CABINS: Cabin[] = [
 ];
 
 export function CabinsGrid() {
-  const [selectedCabin, setSelectedCabin] = useState<Cabin | null>(null);
 
   const handleConsult = (cabinName: string) => {
     const message = `Hola! Quisiera consultar disponibilidad para la ${cabinName} en La Emiliana.`;

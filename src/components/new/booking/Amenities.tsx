@@ -5,10 +5,6 @@ import {
   Flame,
   CircleDot,
   Trees,
-  Car,
-  ShieldCheck,
-  Coffee,
-  Sparkles,
 } from "lucide-react";
 
 interface Amenity {
@@ -21,26 +17,31 @@ interface Amenity {
 const AMENITIES: Amenity[] = [
   {
     icon: Waves,
+    id: 'pileta',
     title: "Piscina al aire libre",
     description: "Zona de relax con solárium y reposeras.",
   },
   {
     icon: Flame,
+    id: 'quincho',
     title: "Quincho y parrilla en cada cabaña",
     description: "Espacios quincho equipados para asados.",
   },
   {
     icon: Wifi,
+    id: 'wifi',
     title: "Conectividad Wi-Fi",
     description: "Internet de alta velocidad en todo el predio.",
   },
   {
     icon:  CircleDot,
+    id: 'canchas',
     title: "Deportes",
     description:"Cancha de fútbol y voley",
   },
   {
     icon: Trees,
+    id: 'naturaleza',
     title: "Parque, Pinares y Lagunas",
     description:"33 ha. de Pinares, Lagunas Naturales para realizar cabalgatas, caminatas entre la naturaleza",
   },
@@ -48,16 +49,16 @@ const AMENITIES: Amenity[] = [
 
 export function AmenitiesBanner() {
   return (
-    <section id="amenities" className="w-full bg-[#233325] text-[#f6f2e9] py-16 md:py-20 px-6 lg:px-16 border-y border-[#2c3e2e]">
+    <section id="amenities" className="w-full bg-[#e3e2d5] text-[#2c3e2e] py-16 md:py-20 px-6 lg:px-16 border-y border-[#2c3e2e]">
       <div className="max-w-7xl mx-auto space-y-12">
         
         {/* Banner Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-8">
           <div className="space-y-3">
-            <span className="text-xs font-semibold tracking-[0.25em] uppercase text-stone-400">
+            <span className="text-xs font-semibold tracking-[0.25em] uppercase text-[#2c3e2e]-400">
               SERVICIOS & COMODIDADES
             </span>
-            <h2 className="text-3xl sm:text-4xl font-serif text-[#f6f2e9] font-normal">
+            <h2 className="text-3xl sm:text-4xl font-serif text-[#2c3e2e] font-normal">
               Todo pensado para tu tranquilidad
             </h2>
           </div>
@@ -67,7 +68,7 @@ export function AmenitiesBanner() {
         </div>
 
                 {/* Grid Principal: Items + Separador + Texto destacado */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-0 items-center">
           
           {/* Lista de Amenities / Características (6 Columnas) */}
           <div className="lg:col-span-9 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 md:gap-0">

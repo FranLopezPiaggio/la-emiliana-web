@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from 'next/image';
 import { ArrowRight, MapPin, Calendar, Users, Moon, MessageCircle } from "lucide-react";
+import { buildWaLink } from "@/lib/whatsapp";
 
 export function BookingHeroSection() {
   const [checkIn, setCheckIn] = useState("");
@@ -12,12 +13,9 @@ export function BookingHeroSection() {
   const handleBookingSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Mensaje preformateado para WhatsApp
-    const message = `Hola! Quisiera consultar disponibilidad en La Emiliana.%0A%0A- Fecha de llegada: ${checkIn || "A definir"}%0A- Personas: ${guests}%0A- Noches: ${nights}`;
-    
-    // Reemplaza con el número oficial de WhatsApp del complejo
-    const whatsappUrl = `https://wa.me/5491112345678?text=${message}`;
-    window.open(whatsappUrl, "_blank");
+    // ponytail: plain \n, encoding lives in buildWaLink — add template in lib/whatsapp/messages.ts when reused elsewhere
+    const message = `Hola! Quisiera consultar disponibilidad en La Emiliana.\n\n- Fecha de llegada: ${checkIn || "A definir"}\n- Personas: ${guests}\n- Noches: ${nights}`;
+    window.open(buildWaLink(message), "_blank", "noopener,noreferrer");
   };
 
 return (
