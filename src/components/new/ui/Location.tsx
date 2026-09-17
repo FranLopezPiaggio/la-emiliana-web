@@ -1,5 +1,6 @@
 // src/components/LocationMap.tsx
 import Link from "next/link";
+import { Map, MapPin } from "lucide-react";
 
 export default function LocationMap() {
   // Coordenadas o ubicación en texto para el mapa
@@ -17,7 +18,7 @@ export default function LocationMap() {
         <div className="flex flex-col items-center text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-moss-300 border border-gold-line/25 text-sand-light text-xs font-sans tracking-wider mb-4">
             <span className="material-symbols-outlined text-[16px] text-terracotta">
-              location_on
+              <MapPin/>
             </span>
             <span>Ubicación Privilegiada</span>
           </div>
@@ -48,7 +49,7 @@ export default function LocationMap() {
           <div className="p-6 bg-moss-300/95 border-t border-gold-line/20 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-3 text-xs sm:text-sm text-sand/90 font-light">
               <span className="material-symbols-outlined text-gold-line text-[20px] shrink-0">
-                navigation
+                <MapPin className="w-3.5 h-3.5 text-stone-200" />
               </span>
               <span>
                 Desde bajada Ruta Prov 94, por Ruta Prov. 37 / Acceso Garruchos, 8 min/5 Kms de camino consolidado de ripio y tierra.
@@ -61,7 +62,7 @@ export default function LocationMap() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-terracotta text-sand-light font-sans text-xs uppercase tracking-[0.16em] font-semibold hover:bg-terracotta-hover transition-all duration-300 border border-gold-line/30 whitespace-nowrap shadow-md"
             >
-              <span className="material-symbols-outlined text-[18px]">map</span>
+              <Map/>
               <span>Abrir en Google Maps</span>
             </Link>
           </div>

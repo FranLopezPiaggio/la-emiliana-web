@@ -17,7 +17,7 @@ const navLinks: NavLink[] = [
   { label: "Experiencia", href: "#experiencia" },
   { label: "Galería", href: "#complejo" },
   { label: "Inversión", href: "#contacto" },
-  { label: "Ubicación", href: "#ubicacion" },
+  // { label: "Ubicación", href: "#ubicacion" },
 ];
 
 export function Navbar() {
@@ -58,17 +58,29 @@ export function Navbar() {
         </nav>
 
         {/* Call To Action Button — ponytail: direct wa.me generic, no modal */}
-        <div className="hidden lg:block">
-          <Link
-            href={getWhatsappUrl("generic")}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[#2c3e2e] hover:bg-[#212f23] text-white text-sm font-medium px-6 py-2.5 rounded-full transition-all duration-300 shadow-sm"
-          >
-            Quiero más información
-          </Link>
-        </div>
+        <div className="flex items-center gap-4">
+          <div className="hidden lg:block">
+            <Link
+              href={getWhatsappUrl("generic")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#2c3e2e] hover:bg-[#212f23] text-white text-sm font-medium px-6 py-2.5 rounded-full transition-all duration-300 shadow-sm"
+            >
+              Quiero más información
+            </Link>
+          </div>
 
+          <div className="hidden lg:block">
+            <Link
+              href='/reservas'
+              // target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#B66D44] hover:bg-[#B66D44] text-white text-sm font-medium px-6 py-2.5 rounded-full transition-all duration-300 shadow-sm"
+            >
+              RESERVAR
+            </Link>
+          </div>
+        </div>
         {/* Mobile Hamburger Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -103,6 +115,18 @@ export function Navbar() {
               Quiero más información
             </Link>
           </div>
+                  <div className="pt-2">
+              <Link
+                href='/reservas'
+                // target="_blank"
+                rel="noopener noreferrer"
+                // className="bg-[#B66D44] hover:bg-[#B66D44] text-white text-sm font-medium px-6 py-2.5 rounded-full transition-all duration-300 shadow-sm"
+                className="block text-center bg-[#B66D44] text-white text-sm font-medium py-3 rounded-full"
+              > 
+                RESERVAR
+              </Link>
+        </div>
+          
         </div>
       )}
     </header>

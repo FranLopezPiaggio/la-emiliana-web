@@ -1,6 +1,7 @@
 // src/components/Footer.tsx
 import Link from "next/link";
 import { getWhatsappUrl } from "@/lib/whatsapp";
+import { MessageCircle, Phone } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -22,11 +23,6 @@ export default function Footer() {
             <p className="text-sm font-sans text-sand/80 max-w-sm font-light leading-relaxed">
               Refugio de quietud y hospitalidad regenerativa en Corrientes, Argentina.
             </p>
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-moss-300 border border-gold-line/20 text-sand-light text-xs font-sans">
-              <span className="material-symbols-outlined text-[16px] text-terracotta">
-                eco
-              </span>
-            </div>
           </div>
 
           {/* Exploration Navigation */}
@@ -77,9 +73,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="material-symbols-outlined text-[16px] text-terracotta">
-                chat
-              </span>
+              <MessageCircle/>
               <span>WhatsApp Directo</span>
             </Link>
           </div>
