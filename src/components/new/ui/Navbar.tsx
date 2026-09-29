@@ -12,11 +12,11 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-  { label: "Inicio", href: "#inicio", active: true },
-  { label: "El complejo", href: "#complejo" },
-  { label: "Experiencia", href: "#experiencia" },
-  { label: "Galería", href: "#complejo" },
-  { label: "Inversión", href: "#contacto" },
+  { label: "Inicio", href: "/#inicio", active: true },
+  { label: "El complejo", href: "/#complejo" },
+  { label: "Experiencia", href: "/#experiencia" },
+  { label: "Galería", href: "/#complejo" },
+  { label: "Inversión", href: "/#contacto" },
   // { label: "Ubicación", href: "#ubicacion" },
 ];
 
@@ -59,7 +59,7 @@ export function Navbar() {
 
         {/* Call To Action Button — ponytail: direct wa.me generic, no modal */}
         <div className="flex items-center gap-4">
-          <div className="hidden lg:block">
+          {/* <div className="hidden lg:block">
             <Link
               href={getWhatsappUrl("generic")}
               target="_blank"
@@ -68,14 +68,14 @@ export function Navbar() {
             >
               Quiero más información
             </Link>
-          </div>
+          </div> */}
 
           <div className="hidden lg:block">
             <Link
               href='/reservas'
               // target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#B66D44] hover:bg-[#B66D44] text-white text-sm font-medium px-6 py-2.5 rounded-full transition-all duration-300 shadow-sm"
+              className="bg-[#B66D44] hover:bg-[#B66D44] text-white text-sm font-medium px-6 py-2.5 rounded-full transition-all duration-300 shadow-sm mr-10"
             >
               RESERVAR
             </Link>
@@ -104,7 +104,7 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
-          <div className="pt-2">
+          {/* <div className="pt-2">
             <Link
               href={getWhatsappUrl("generic")}
               target="_blank"
@@ -114,8 +114,8 @@ export function Navbar() {
             >
               Quiero más información
             </Link>
-          </div>
-                  <div className="pt-2">
+          </div> */}
+            <div className="pt-2">
               <Link
                 href='/reservas'
                 // target="_blank"

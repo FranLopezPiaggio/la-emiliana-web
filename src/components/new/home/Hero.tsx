@@ -36,6 +36,17 @@ export function Hero() {
           <p className="text-lg md:text-xl text-white-800 font-light max-w-lg leading-relaxed">
             Naturaleza, descanso y experiencias que se convierten en oportunidades.
           </p>
+
+          <div className="hidden lg:block">
+            <Link
+              href='/reservas'
+              // target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-black hover:bg-[#B66D44] hover:text-white text-sm font-medium px-6 py-2.5 rounded-full transition-all duration-300 shadow-sm mr-10"
+            >
+              Reserva tu lugar y conocenos
+            </Link>
+          </div>
         </div>
 
         {/* Right Side Callout / Script Overlay Text */}
